@@ -9,10 +9,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UserDescriptionComponent implements OnInit {
     // arrayRepo:Repo[];
-    @Input() repo:Repo;
+    // @Input() repo:repositoryclass;
 
 
-  constructor(private userServices:userRequestServices) { }
+  constructor() { }
 
   ngOnInit() {
   }
