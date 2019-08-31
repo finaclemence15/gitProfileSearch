@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { UserDescriptionComponent } from './user-description/user-description.component';
 import { GithubProfileComponent } from './github-profile/github-profile.component';
 import { BolderDirective } from './bolder.directive';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { BolderDirective } from './bolder.directive';
     UserDescriptionComponent,
     GithubProfileComponent,
     BolderDirective,
+    DateCountPipe,
     
   ],
   imports: [
