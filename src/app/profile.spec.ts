@@ -1,4 +1,4 @@
-import { ProfileClass } from './profile-class';
+import { ProfileClass } from './profile';
 
 describe('ProfileClass', () => {
   it('should create an instance', () => {

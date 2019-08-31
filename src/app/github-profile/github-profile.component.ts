@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-// import { profileClass } from '../profile-class';
-// import { User } from '../user-description';
+import { Profile } from '../profile';
 import { Repositoryclass } from '../repositoryclass';
 
 
@@ -9,12 +8,12 @@ import { Repositoryclass } from '../repositoryclass';
   selector: 'app-github-profile',
   templateUrl: './github-profile.component.html',
   // providers: [profileclass],
-  // styleUrls: ['./github-profile.component.css']
+  styleUrls: ['./github-profile.component.css']
 })
 export class GithubProfileComponent implements OnInit {
 
-  // repositoryclass:User;
-  // arrayRepo:Repo[];
+  profile:Profile;
+  arrayRepositoryclass:Repositoryclass[];
   // username:any;
 
   constructor() { }

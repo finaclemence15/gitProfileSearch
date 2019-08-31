@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-// import { profile-class } from '../';
-// import { Repo } from '../repo-class/repo';
+import { Repositoryclass } from '../repositoryclass';
 
 @Component({
   selector: 'app-user-description',
@@ -9,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UserDescriptionComponent implements OnInit {
     // arrayRepo:Repo[];
-    // @Input() repo:repositoryclass;
+    @Input() repositoryclass:Repositoryclass;
 
 
   constructor() { }
