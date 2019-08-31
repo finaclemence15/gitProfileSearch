@@ -1,7 +1,7 @@
-import { ProfileClass } from './profile';
+import { Profile } from './profile';
 
-describe('ProfileClass', () => {
+describe('Profile', () => {
   it('should create an instance', () => {
-    expect(new ProfileClass()).toBeTruthy();
+    expect(new Profile()).toBeTruthy();
   });
 });
