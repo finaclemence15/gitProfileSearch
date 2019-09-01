@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 # Brief description of application
-This is a website where you can where you can access your git hub account by typing your github user name and see all description concerning your git hub account.
+This is a website where you can access your git hub account by typing your github user name and see all description concerning your git hub account.
 
 # Date of current version
 

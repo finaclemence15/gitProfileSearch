@@ -1,34 +1,28 @@
 img {
-    width: 50%;
-    height: 50%;
+    width: 35%;
+    height: 35%;
   }
-  
-  .profile-card {
-    padding: 10px;
-    border: 2px solid teal;
-    border-radius: 4px;
-    background-color: rgba(224, 208, 246, 0.68);
-    max-height: 500px;
-    overflow: scroll;
-  }
-  
+    
   .following {
     float: right;
-  }
+  } 
   
   .center {
     text-align: center;
   }
   
-  .max{
+  /* .max{
     height: 400px;
-  }
+  } */
   
   h3 {
     text-decoration: underline;
+    font-style: oblique;
   }
   
-  .scroll {
-    max-height: 500px;
-    overflow: scroll;
+  .profile{
+    background-color: rgb(70, 68, 68);
+    border: 3px solid black;
+    color: #FDFEFE;
+    max-height: 750px;
   }
