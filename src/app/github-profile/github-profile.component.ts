@@ -13,11 +13,11 @@ import { Repositoryclass } from '../repositoryclass';
 })
 export class GithubProfileComponent implements OnInit {
 
-  profile:Profile;
-  arrayRepositoryclass:Repositoryclass[];
+  profile: Profile;
+  arrayRepositoryclass: Repositoryclass[];
   // username:any;
 
-  constructor( private userService: UserRequestService) { }
+  constructor(private userService: UserRequestService) { }
   getResponse(username) {
     this.userService.userRequest(username);
     this.profile = this.userService.profile;
@@ -31,14 +31,14 @@ export class GithubProfileComponent implements OnInit {
 
   }
   getRepos() {
-  
+
     this.arrayRepositoryclass = this.userService.arrayRepositoryclass;
 
     console.log("Got Repos Response");
     console.log(this.arrayRepositoryclass);
 
   }
-  toggleRepos(){
+  toggleRepos() {
     this.profile.showRepos = !this.profile.showRepos;
     console.log("Toggle Repos");
   }

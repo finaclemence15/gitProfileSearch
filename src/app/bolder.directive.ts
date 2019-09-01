@@ -5,8 +5,8 @@ import { Directive, ElementRef } from '@angular/core';
 })
 export class BolderDirective {
 
-  constructor(private elem:ElementRef) {
+  constructor(private elem: ElementRef) {
     elem.nativeElement.style.fontWeight = "bolder";
-   }
+  }
 
 }

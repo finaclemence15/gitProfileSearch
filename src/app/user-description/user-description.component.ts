@@ -10,11 +10,11 @@ import { Repositoryclass } from '../repositoryclass';
   styleUrls: ['./user-description.component.css']
 })
 export class UserDescriptionComponent implements OnInit {
-   
-       @Input() repositoryclass:Repositoryclass;
+
+  @Input() repositoryclass: Repositoryclass;
 
 
-  constructor( private userService: UserRequestService) { } ////
+  constructor(private userService: UserRequestService) { } ////
 
   ngOnInit() {
   }

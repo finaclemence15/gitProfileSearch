@@ -1,39 +1,42 @@
 <div class="container-fluide">
-    <div class="row">
-      <div class="col-md-12">
-          <app-navbar (addUser)='getResponse($event)'></app-navbar>
-      </div>
-    </div> <!--end row form -->
-    <br>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="profile">
-          <div class="center">
-            <img src="{{profile.photoUrl}}" alt="Avatar">
-            <h3>{{profile.userProfile}}</h3>
-          </div>
-          <p>{{profile.bio}}</p>
-          <div class="follow">
-            <button class="btn btn-secondary btn-lg" type="button" name="button">Followers: {{profile.followers}}</button>
-            <button class="btn btn-secondary btn-lg following" type="button" name="button">Following: {{profile.following}}</button>
-          </div>
-          <br>
-          <div class="center">
-            <button class="btn btn-dark" type="button" name="button" (click)='toggleRepos()' (click)='getRepos()'> Repos:{{profile.numRepos}} <br> <br> Click to View </button>
-          </div>
-          <br>
-          <p>Created {{profile.created|dateCount}} day(s) ago.</p>
-          {{profile.showRepos}}
-        </div>
-      </div> <!-- end div profile -->
-  
-  
-      <div class="col-md-6">
-        <div *ngFor='let repositoryclass of arrayRepositoryclass'>
-          <app-github-profile *ngIf='profile.showRepos'> [repositoryclass]='repositoryclass'</app-github-profile>
-        </div>
-      </div> <!-- end div repos -->
-  
-    </div> <!-- end div row github -->
-  
+  <div class="row">
+    <div class="col-md-12">
+      <app-navbar (addUser)='getResponse($event)'></app-navbar>
+    </div>
   </div>
+  <!--end row form -->
+  <br>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="profile">
+        <div class="center">
+          <img src="{{profile.photoUrl}}" alt="Avatar">
+          <h3>{{profile.userProfile}}</h3>
+        </div>
+        <p>{{profile.bio}}</p>
+        <div class="follow">
+          <button class="btn btn-secondary btn-lg" type="button" name="button">Followers: {{profile.followers}}</button>
+          <button class="btn btn-secondary btn-lg following" type="button" name="button">Following:
+            {{profile.following}}</button>
+        </div>
+        <br>
+        <div class="center">
+          <button class="btn btn-dark" type="button" name="button" (click)='toggleRepos()' (click)='getRepos()'>
+            Repos:{{profile.numRepos}} <br> <br> Click to View </button>
+        </div>
+        <br>
+        <p>Created {{profile.created|dateCount}} day(s) ago.</p>
+        {{profile.showRepos}}
+      </div>
+    </div> <!-- end div profile -->
+
+
+    <div class="col-md-6">
+      <div *ngFor='let repositoryclass of arrayRepositoryclass'>
+        <app-github-profile *ngIf='profile.showRepos'> [repositoryclass]='repositoryclass'</app-github-profile>
+      </div>
+    </div> <!-- end div repos -->
+
+  </div> <!-- end div row github -->
+
+</div>
