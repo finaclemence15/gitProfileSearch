@@ -1,17 +1,20 @@
 import { Component, OnInit, Input } from '@angular/core';
+
+import { UserRequestService } from '../user-http/user-request.service';
 import { Repositoryclass } from '../repositoryclass';
 
 @Component({
   selector: 'app-user-description',
   templateUrl: './user-description.component.html',
+  providers: [UserRequestService],
   styleUrls: ['./user-description.component.css']
 })
 export class UserDescriptionComponent implements OnInit {
-    // arrayRepo:Repo[];
-    @Input() repositoryclass:Repositoryclass;
+   
+       @Input() repositoryclass:Repositoryclass;
 
 
-  constructor() { }
+  constructor( private userService: UserRequestService) { } ////
 
   ngOnInit() {
   }

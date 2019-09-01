@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { UserRequestService } from '../user-http/user-request.service';
 import { Profile } from '../profile';
 import { Repositoryclass } from '../repositoryclass';
 
@@ -7,7 +8,7 @@ import { Repositoryclass } from '../repositoryclass';
 @Component({
   selector: 'app-github-profile',
   templateUrl: './github-profile.component.html',
-  // providers: [profileclass],
+  providers: [UserRequestService],
   styleUrls: ['./github-profile.component.css']
 })
 export class GithubProfileComponent implements OnInit {
@@ -16,29 +17,29 @@ export class GithubProfileComponent implements OnInit {
   arrayRepositoryclass:Repositoryclass[];
   // username:any;
 
-  constructor() { }
+  constructor( private userService: UserRequestService) { }
   getResponse(username) {
-    // this.userService.userRequest(username);
-    // this.user = this.userService.user;
-    // this.user.showRepos = false;
+    this.userService.userRequest(username);
+    this.profile = this.userService.profile;
+    this.profile.showRepos = false;
 
-    console.log("Got User Response");
-    // console.log(this.user);
+    console.log("Got Profile Response");
+    console.log(this.profile);
 
-    // this.userService.repoRequest(username);
-    // this.arrayRepo = this.userService.arrayRepo;
+    this.userService.userRequest(username); ////
+    this.arrayRepositoryclass = this.userService.arrayRepositoryclass;
 
   }
   getRepos() {
-    // this.userService.repoRequest(username);
-    // this.arrayRepo = this.userService.arrayRepo;
+  
+    this.arrayRepositoryclass = this.userService.arrayRepositoryclass;
 
     console.log("Got Repos Response");
-    // console.log(this.arrayRepo);
+    console.log(this.arrayRepositoryclass);
 
   }
   toggleRepos(){
-    // this.user.showRepos = !this.user.showRepos;
+    this.profile.showRepos = !this.profile.showRepos;
     console.log("Toggle Repos");
   }
 

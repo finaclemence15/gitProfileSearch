@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Response } from '@angular/http';
+// import { Response } from '@angular/http';
 
 import { environment } from '../../environments/environment';
 import { Profile } from '../profile';
@@ -18,7 +18,7 @@ export class UserRequestService {
     this.profile = new Profile("", "", "",0,0,0, "");
     this.repositoryclass = new Repositoryclass("","","");
    }
-   private profileInput = "";
+   private profileInput = ""; ////
 
    userRequest(profileInput){
     this.http.get("https://api.github.com/users/" + profileInput + "?access_token=9c730ea63cceee5b4c87054f25eaf4d6580c6a21").subscribe((response)=>{

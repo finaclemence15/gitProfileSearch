@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Output, EventEmitter } from '@angular/core';
+
+import { Profile } from '../profile';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  username = "finaclemence15";
+
+  @Output() addUser = new EventEmitter<any>();
+
+  submitUser() {
+    this.addUser.emit(this.username);
+  }
+
   constructor() { }
 
   ngOnInit() {
+    this.submitUser();
   }
 
 }
