@@ -1,5 +1,5 @@
-  
-<div class="container-fluide">
+  <br> <br>
+<!-- <div class="container-fluide"> -->
     <div class="row">
         <app-navbar (addUser)='getResponse($event)'></app-navbar>
     </div> <!--end row form -->
@@ -18,7 +18,7 @@
           </div>
           <br>
           <div class="center">
-            <button class="btn-danger" type="button" name="button" (click)='toggleRepos()' (click)='getRepos()'>Repos:{{profile.numRepos}} <br> Click to View </button>
+            <button class="btn-danger" type="button" name="button" (click)='toggleRepos()' (click)='getRepos()'> Repos:{{profile.numRepos}} <br> Click to View </button>
           </div>
           <br>
           <p>Created {{profile.created|dateCount}} day(s) ago.</p>
@@ -29,11 +29,11 @@
   
       <div class="col-md-6 scroll">
         <div *ngFor='let repositoryclass of arrayRepositoryclass'>
-          <app-github-repo *ngIf='profile.showRepos' [repositoryclass]='repositoryclass'></app-github-repo>
+          <app-github-profile *ngIf='profile.showRepos'> [repositoryclass]='repositoryclass'</app-github-profile>
         </div>
       </div> <!-- end div repos -->
   
   
     </div> <!-- end div row github -->
   
-  </div>
+  <!-- </div> -->
